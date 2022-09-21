@@ -1,6 +1,7 @@
 //@ts-check
 
 // eslint-disable-next-line @typescript-eslint/no-var-requires
+const withTM = require('next-transpile-modules')(['@heartlandone/vega-react']);
 const { withNx } = require('@nrwl/next/plugins/with-nx');
 
 /**
@@ -14,4 +15,4 @@ const nextConfig = {
   },
 };
 
-module.exports = withNx(nextConfig);
+module.exports = withTM(withNx(nextConfig));
